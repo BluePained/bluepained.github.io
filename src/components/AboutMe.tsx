@@ -10,7 +10,7 @@ import {
 
 const AboutMe = () => {
   const theme = useTheme();
-  const _isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <>

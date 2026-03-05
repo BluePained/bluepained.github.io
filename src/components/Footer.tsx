@@ -3,7 +3,7 @@ import {
   Typography,
   useTheme,
   IconButton,
-  useMediaQuery
+  useMediaQuery,
 } from "@mui/material";
 
 const Footer: React.FC = () => {
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           sx={{
             color: theme.palette.primary.light,
             display: "flex",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
           variant="h6"
         >
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             display: "flex",
             justifyContent: "center",
             flexDirection: "row",
-            gap: 2.5
+            gap: 2.5,
           }}
         >
           <IconButton
@@ -41,11 +41,11 @@ const Footer: React.FC = () => {
             sx={{
               transition: "transform 0.3s ease-in-out",
               "&:hover": {
-                transform: "scale(1.1)"
+                transform: "scale(1.1)",
               },
               "&:active": {
-                transform: "scale(1.2)"
-              }
+                transform: "scale(1.2)",
+              },
             }}
           >
             <img
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               style={{
                 width: isMobile ? 40 : 30,
                 height: isMobile ? 40 : 30,
-                objectFit: "contain"
+                objectFit: "contain",
               }}
             />
           </IconButton>
@@ -65,11 +65,11 @@ const Footer: React.FC = () => {
             sx={{
               transition: "transform 0.3s ease-in-out",
               "&:hover": {
-                transform: "scale(1.1)"
+                transform: "scale(1.1)",
               },
               "&:active": {
-                transform: "scale(1.2)"
-              }
+                transform: "scale(1.2)",
+              },
             }}
           >
             <img
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
               style={{
                 width: isMobile ? 42 : 32,
                 height: isMobile ? 42 : 32,
-                objectFit: "contain"
+                objectFit: "contain",
               }}
             />
           </IconButton>
@@ -89,11 +89,11 @@ const Footer: React.FC = () => {
             sx={{
               transition: "transform 0.3s ease-in-out",
               "&:hover": {
-                transform: "scale(1.1)"
+                transform: "scale(1.1)",
               },
               "&:active": {
-                transform: "scale(1.2)"
-              }
+                transform: "scale(1.2)",
+              },
             }}
           >
             <img
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               style={{
                 width: isMobile ? 52 : 42,
                 height: isMobile ? 52 : 42,
-                objectFit: "contain"
+                objectFit: "contain",
               }}
             />
           </IconButton>
@@ -113,11 +113,11 @@ const Footer: React.FC = () => {
             sx={{
               transition: "transform 0.3s ease-in-out",
               "&:hover": {
-                transform: "scale(1.1)"
+                transform: "scale(1.1)",
               },
               "&:active": {
-                transform: "scale(1.2)"
-              }
+                transform: "scale(1.2)",
+              },
             }}
           >
             <img
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
               style={{
                 width: isMobile ? 55 : 45,
                 height: isMobile ? 55 : 45,
-                objectFit: "contain"
+                objectFit: "contain",
               }}
             />
           </IconButton>

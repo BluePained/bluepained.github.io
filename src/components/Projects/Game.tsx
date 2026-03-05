@@ -115,8 +115,8 @@ const Game = () => {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "end",
-            mr: 2,
+            justifyContent: { xs: "center", md: "flex-end" },
+            mr: { xs: 0, md: 2 },
             flexWrap: "wrap",
           }}
         >

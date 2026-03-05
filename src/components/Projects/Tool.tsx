@@ -93,29 +93,35 @@ const Game = () => {
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
   const [pressedTab, setPressedTab] = useState<string | null>(null);
 
-  const shader = [
+  const tool = [
     {
-      title: "Dissolve",
-      gifPath: [
-        "/Shaders/Dissolve/Dissolve_Shell_Full.gif",
-        "/Shaders/Dissolve/Dissolves_Full.gif",
-        "/Shaders/Dissolve/Dissolves.gif",
-        "/Shaders/Dissolve/Pixelated_Dissolve.gif",
+      gifPath: ["/Tools/MaterialsInstanceCreator.gif"],
+      title: "Materials Instance Creator (Unreal)",
+      desc: [
+        "Bulk-creates material using a shared parent material (for parameter data).",
+        "Support individual texture overrides.",
+        "Automatically assigns texture per material by parsing folder contents and naming convention",
+        "Saves generated materials into corresponding asset folders or  a specified output directory.",
       ],
-      desc: ["Normal Dissolve", "Shell Dissolve", "Pixelated Dissolve"],
+      how: [
+        "The tool scans selected folders in the content browser and collects texture assets.",
+        "The textures are assigned to material parameters by matching predefined keywords (“Color”, “Normal”) in asset names.",
+        "If the texture names match the material parameter, the tool automatically creates material data.",
+      ],
     },
     {
-      title: "Force Field",
-      gifPath: [
-        "/Shaders/ForceField/ForceField-Hologram_Full.gif",
-        "/Shaders/ForceField/ForceField-Hologram.gif",
+      gifPath: ["/Tools/TextureRotate.gif"],
+      title: "Texture Rotator (Unity)",
+      desc: [
+        "Rotate the texture in Unity without needing to open/fixed it in another program.",
+        "Saved the texture as a separate file.",
       ],
-      desc: ["None"],
-    },
-    {
-      title: "Dither",
-      gifPath: ["/Shaders/Dither.gif"],
-      desc: ["None"],
+      how: [
+        "The tool samples pixel data from the source image.",
+        "Rotate using 2D rotation math around the texture center.",
+        "Preview the image without modifying the original asset.",
+        "Save the image by writing to disk and refreshing it in the asset database.",
+      ],
     },
   ];
 
@@ -145,7 +151,14 @@ const Game = () => {
           flexDirection: "column",
         }}
       >
-        <Box sx={{ display: "flex", justifyContent: "end", mr: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "center", md: "flex-end" },
+            mr: { xs: 0, md: 2 },
+            flexWrap: "wrap",
+          }}
+        >
           {tabs.map((tab) => {
             const isActive = currentPath === tab.link;
             const isHovered = hoveredTab === tab.link;
@@ -201,7 +214,7 @@ const Game = () => {
             bgcolor: theme.palette.background.card,
           }}
         >
-          {shader.map((shader, index) => (
+          {tool.map((tool, index) => (
             <Box key={index} sx={{ mb: 6 }}>
               <Typography
                 variant="h5"
@@ -211,9 +224,22 @@ const Game = () => {
                   mb: 1,
                 }}
               >
-                {shader.title}
+                {tool.title}
               </Typography>
-              <ImageSlider images={shader.gifPath} />
+              <ImageSlider images={tool.gifPath} />
+
+              <Box component="ul" sx={{ pl: 2, mt: 1 }}>
+                {tool.desc?.map((point, i) => (
+                  <Typography
+                    key={i}
+                    component="li"
+                    variant="body2"
+                    sx={{ mb: 0.5 }}
+                  >
+                    {point}
+                  </Typography>
+                ))}
+              </Box>
               <Typography
                 variant="h6"
                 sx={{
@@ -221,10 +247,10 @@ const Game = () => {
                   fontWeight: 700,
                 }}
               >
-                Shader Variation:
+                How it works:
               </Typography>
               <Box component="ul" sx={{ pl: 2, mt: 1 }}>
-                {shader.desc?.map((point, i) => (
+                {tool.how?.map((point, i) => (
                   <Typography
                     key={i}
                     component="li"

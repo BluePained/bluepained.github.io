@@ -2,15 +2,15 @@ import {
   Box,
   Paper,
   Typography,
-  useMediaQuery,
+  //useMediaQuery,
   useTheme,
-  Divider
+  Divider,
 } from "@mui/material";
 
 const Contact = () => {
   const theme = useTheme();
-  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
-  const isMobile = useMediaQuery("(max-width: 600px)");
+  //const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
+  //const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
     <>
@@ -21,7 +21,7 @@ const Contact = () => {
           px: { xs: 2, md: 50 },
           display: "flex",
           justifyContent: "center",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <Paper
@@ -30,14 +30,14 @@ const Contact = () => {
             px: { xs: 3, md: 8 },
             py: { xs: 4, md: 2 },
             borderRadius: 4,
-            bgcolor: theme.palette.background.card
+            bgcolor: theme.palette.background.card,
           }}
         >
           <Typography
             sx={{
               color: theme.palette.background.tab,
               textAlign: "center",
-              fontWeight: 700
+              fontWeight: 700,
             }}
             variant="h3"
           >
@@ -49,7 +49,7 @@ const Contact = () => {
                 width: "70%",
                 mt: 2,
                 mb: 5,
-                bgcolor: theme.palette.text.primary
+                bgcolor: theme.palette.text.primary,
               }}
             />
           </Box>

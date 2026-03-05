@@ -1,11 +1,11 @@
 import {
   Box,
   Typography,
-  useMediaQuery,
+  // useMediaQuery,
   useTheme,
   Divider,
   Paper,
-  IconButton
+  IconButton,
 } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -26,14 +26,14 @@ function ImageSlider({ images }: { images: string[] }) {
         width: "100%",
         overflow: "hidden",
         borderRadius: 3,
-        mb: 3
+        mb: 3,
       }}
     >
       <Box
         sx={{
           display: "flex",
           transition: "transform 0.5s ease",
-          transform: `translateX(-${current * 100}%)`
+          transform: `translateX(-${current * 100}%)`,
         }}
       >
         {images.map((img, index) => (
@@ -44,7 +44,7 @@ function ImageSlider({ images }: { images: string[] }) {
             alt={`slide-${index}`}
             sx={{
               width: "100%",
-              flexShrink: 0
+              flexShrink: 0,
             }}
           />
         ))}
@@ -60,7 +60,7 @@ function ImageSlider({ images }: { images: string[] }) {
               transform: "translateY(-50%)",
               bgcolor: "rgba(0,0,0,0.4)",
               color: "white",
-              "&:hover": { bgcolor: "rgba(0,0,0,0.7)" }
+              "&:hover": { bgcolor: "rgba(0,0,0,0.7)" },
             }}
           >
             <ArrowBackIosNewIcon />
@@ -74,7 +74,7 @@ function ImageSlider({ images }: { images: string[] }) {
               transform: "translateY(-50%)",
               bgcolor: "rgba(0,0,0,0.4)",
               color: "white",
-              "&:hover": { bgcolor: "rgba(0,0,0,0.7)" }
+              "&:hover": { bgcolor: "rgba(0,0,0,0.7)" },
             }}
           >
             <ArrowForwardIosIcon />
@@ -87,8 +87,8 @@ function ImageSlider({ images }: { images: string[] }) {
 
 const Game = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
-  const isMobile = useMediaQuery("(max-width: 600px)");
+  //const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
+  //const isMobile = useMediaQuery("(max-width: 600px)");
   const currentPath = window.location.pathname;
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
   const [pressedTab, setPressedTab] = useState<string | null>(null);
@@ -100,35 +100,35 @@ const Game = () => {
         "/Shaders/Dissolve/Dissolve_Shell_Full.gif",
         "/Shaders/Dissolve/Dissolves_Full.gif",
         "/Shaders/Dissolve/Dissolves.gif",
-        "/Shaders/Dissolve/Pixelated_Dissolve.gif"
+        "/Shaders/Dissolve/Pixelated_Dissolve.gif",
       ],
-      desc: ["Normal Dissolve", "Shell Dissolve", "Pixelated Dissolve"]
+      desc: ["Normal Dissolve", "Shell Dissolve", "Pixelated Dissolve"],
     },
     {
       title: "Force Field",
       gifPath: [
         "/Shaders/ForceField/ForceField-Hologram_Full.gif",
-        "/Shaders/ForceField/ForceField-Hologram.gif"
+        "/Shaders/ForceField/ForceField-Hologram.gif",
       ],
-      desc: ["None"]
+      desc: ["None"],
     },
     {
       title: "Dither",
       gifPath: ["/Shaders/Dither.gif"],
-      desc: ["None"]
-    }
+      desc: ["None"],
+    },
   ];
 
   const tabs = [
     {
       title: "Game",
-      link: "/Projects/Game"
+      link: "/Projects/Game",
     },
     {
       title: "Shader",
-      link: "/Projects/Shader"
+      link: "/Projects/Shader",
     },
-    { title: "Tool", link: "/Projects/Tool" }
+    { title: "Tool", link: "/Projects/Tool" },
   ];
 
   return (
@@ -140,7 +140,7 @@ const Game = () => {
           px: { xs: 2, md: 50 },
           display: "flex",
           justifyContent: "center",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "end", mr: 2 }}>
@@ -158,7 +158,7 @@ const Game = () => {
                   borderTopRightRadius: 3,
                   backgroundColor: shouldHighlight
                     ? theme.palette.background.card
-                    : theme.palette.background.tabSecondary
+                    : theme.palette.background.tabSecondary,
                 }}
               >
                 <Typography
@@ -181,7 +181,7 @@ const Game = () => {
                     transform: isPressed ? "scale(1.1)" : "scale(1)",
                     color: shouldHighlight
                       ? theme.palette.text.primary
-                      : theme.palette.text.secondary
+                      : theme.palette.text.secondary,
                   }}
                 >
                   {tab.title}
@@ -196,7 +196,7 @@ const Game = () => {
             px: { xs: 3, md: 8 },
             pt: { xs: 3, md: 8 },
             borderRadius: 4,
-            bgcolor: theme.palette.background.card
+            bgcolor: theme.palette.background.card,
           }}
         >
           {shader.map((shader, index) => (
@@ -206,7 +206,7 @@ const Game = () => {
                 sx={{
                   color: theme.palette.background.tab,
                   fontWeight: 700,
-                  mb: 1
+                  mb: 1,
                 }}
               >
                 {shader.title}
@@ -216,7 +216,7 @@ const Game = () => {
                 variant="h6"
                 sx={{
                   color: theme.palette.background.tab,
-                  fontWeight: 700
+                  fontWeight: 700,
                 }}
               >
                 Shader Variation:
@@ -236,7 +236,7 @@ const Game = () => {
               <Divider
                 sx={{
                   mt: 5,
-                  bgcolor: theme.palette.text.primary
+                  bgcolor: theme.palette.text.primary,
                 }}
               />
             </Box>

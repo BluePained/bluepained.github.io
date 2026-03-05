@@ -1,18 +1,18 @@
 import {
   Box,
   Typography,
-  useMediaQuery,
+  //useMediaQuery,
   useTheme,
   Divider,
   Paper,
-  Grid
+  Grid,
 } from "@mui/material";
 import { useState } from "react";
 
 const Game = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
-  const isMobile = useMediaQuery("(max-width: 600px)");
+  //const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
+  //const isMobile = useMediaQuery("(max-width: 600px)");
   const currentPath = window.location.pathname;
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
   const [pressedTab, setPressedTab] = useState<string | null>(null);
@@ -29,8 +29,8 @@ const Game = () => {
       job: [
         "Designed and implemented data-driven system using ScriptableObject for characters and document papers data.",
         "Controlled the atmosphere of the game with lights and post-processing.",
-        "Created fading animation of the tube using Shader Graph."
-      ]
+        "Created fading animation of the tube using Shader Graph.",
+      ],
     },
     {
       title: "Ella's alone night",
@@ -42,8 +42,8 @@ const Game = () => {
       role: "Programmer",
       job: [
         "Designed and implemented the gameplay.The Sanity dropped overtime according to “Mind” state and determined the difficulty.",
-        "Integrate the assets and build the scene using 2D Tilemap Editor"
-      ]
+        "Integrate the assets and build the scene using 2D Tilemap Editor",
+      ],
     },
     {
       title: "Farly's Flower Shop",
@@ -54,8 +54,8 @@ const Game = () => {
       team: "4 People",
       role: "2D Artist",
       job: [
-        "Designed overall 2D assets, and designed the modularity of the customer to make sure the game had a variety of customer appearances."
-      ]
+        "Designed overall 2D assets, and designed the modularity of the customer to make sure the game had a variety of customer appearances.",
+      ],
     },
     {
       title: "Sisyphus on the road trip",
@@ -67,8 +67,8 @@ const Game = () => {
       role: "Programmer",
       job: [
         "Implement the player's movement.",
-        "Adjusted the car's physics so that it goes forward smoothly."
-      ]
+        "Adjusted the car's physics so that it goes forward smoothly.",
+      ],
     },
     {
       title: "Smithy",
@@ -81,21 +81,21 @@ const Game = () => {
       job: [
         "Designed and implemented data-driven system using scriptable object for characters and dialogues.",
         "Implement the customizable object from 2D sprites.",
-        "Write the story and the dialogues."
-      ]
-    }
+        "Write the story and the dialogues.",
+      ],
+    },
   ];
 
   const tabs = [
     {
       title: "Game",
-      link: "/Projects/Game"
+      link: "/Projects/Game",
     },
     {
       title: "Shader",
-      link: "/Projects/Shader"
+      link: "/Projects/Shader",
     },
-    { title: "Tool", link: "/Projects/Tool" }
+    { title: "Tool", link: "/Projects/Tool" },
   ];
 
   return (
@@ -107,7 +107,7 @@ const Game = () => {
           px: { xs: 2, md: 50 },
           display: "flex",
           justifyContent: "center",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "end", mr: 2 }}>
@@ -125,7 +125,7 @@ const Game = () => {
                   borderTopRightRadius: 3,
                   backgroundColor: shouldHighlight
                     ? theme.palette.background.card
-                    : theme.palette.background.tabSecondary
+                    : theme.palette.background.tabSecondary,
                 }}
               >
                 <Typography
@@ -148,7 +148,7 @@ const Game = () => {
                     transform: isPressed ? "scale(1.1)" : "scale(1)",
                     color: shouldHighlight
                       ? theme.palette.text.primary
-                      : theme.palette.text.secondary
+                      : theme.palette.text.secondary,
                   }}
                 >
                   {tab.title}
@@ -163,7 +163,7 @@ const Game = () => {
             px: { xs: 3, md: 8 },
             pt: { xs: 3, md: 8 },
             borderRadius: 4,
-            bgcolor: theme.palette.background.card
+            bgcolor: theme.palette.background.card,
           }}
         >
           {game.map((game, index) => (
@@ -177,7 +177,7 @@ const Game = () => {
                     rel="noopener noreferrer"
                     sx={{
                       display: "block",
-                      textDecoration: "none"
+                      textDecoration: "none",
                     }}
                   >
                     <Box
@@ -192,8 +192,8 @@ const Game = () => {
                         transition: "0.3s ease",
                         "&:hover": {
                           transform: "scale(1.02)",
-                          opacity: 0.9
-                        }
+                          opacity: 0.9,
+                        },
                       }}
                     />
                   </Box>
@@ -201,7 +201,7 @@ const Game = () => {
                     variant="h6"
                     sx={{
                       color: theme.palette.background.tab,
-                      fontWeight: 700
+                      fontWeight: 700,
                     }}
                   >
                     {game.title}
@@ -224,14 +224,14 @@ const Game = () => {
                     sx={{
                       width: "100%",
                       borderRadius: 3,
-                      mb: 3
+                      mb: 3,
                     }}
                   />
                   <Typography
                     variant="h6"
                     sx={{
                       color: theme.palette.background.tab,
-                      fontWeight: 700
+                      fontWeight: 700,
                     }}
                   >
                     What I built
@@ -253,7 +253,7 @@ const Game = () => {
               <Divider
                 sx={{
                   mt: 6,
-                  bgcolor: theme.palette.text.primary
+                  bgcolor: theme.palette.text.primary,
                 }}
               />
             </Box>

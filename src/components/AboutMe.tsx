@@ -1,7 +1,7 @@
 import {
   Box,
   Paper,
-  useMediaQuery,
+  //useMediaQuery,
   useTheme,
   Typography,
   Divider,
@@ -10,7 +10,7 @@ import {
 
 const AboutMe = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
+  //const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <>

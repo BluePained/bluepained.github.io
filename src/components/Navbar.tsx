@@ -12,7 +12,7 @@ import {
   ListItemText,
   Divider,
   useScrollTrigger,
-  Collapse
+  Collapse,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
@@ -30,14 +30,14 @@ const Navbar: React.FC = () => {
   const tabs = [
     {
       title: "Home",
-      link: "/"
+      link: "/",
     },
     {
       title: "Projects",
-      link: ["/Projects/Game", "/Projects/Shader", "/Projects/Tool"]
+      link: ["/Projects/Game", "/Projects/Shader", "/Projects/Tool"],
     },
     { title: "About Me", link: "/AboutMe" },
-    { title: "Contact", link: "/Contact" }
+    { title: "Contact", link: "/Contact" },
   ];
 
   useEffect(() => {
@@ -55,14 +55,14 @@ const Navbar: React.FC = () => {
       <AppBar
         sx={{
           zIndex: 1550,
-          bgcolor: theme.palette.background.nav
+          bgcolor: theme.palette.background.nav,
         }}
       >
         <Toolbar
           disableGutters
           sx={{
             mt: 2,
-            mb: 2
+            mb: 2,
           }}
         >
           {!isSmallScreen ? (
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                width: "100%"
+                width: "100%",
               }}
             >
               <Typography
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
                   color: theme.palette.text.primary,
                   cursor: "pointer",
                   display: "flex",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
                 variant="h4"
               >
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
                     sx={{
                       display: "flex",
                       justifyContent: "center",
-                      flexDirection: "row"
+                      flexDirection: "row",
                     }}
                   >
                     <Divider
@@ -103,14 +103,14 @@ const Navbar: React.FC = () => {
                         p: 0.2,
                         mt: 1.2,
                         mb: 2,
-                        bgcolor: theme.palette.background.divider
+                        bgcolor: theme.palette.background.divider,
                       }}
                     />
                   </Box>
                   <Box
                     sx={{
                       display: "flex",
-                      justifyContent: "center"
+                      justifyContent: "center",
                     }}
                   >
                     {tabs.map((tab) => {
@@ -148,7 +148,7 @@ const Navbar: React.FC = () => {
                               : theme.palette.text.primary,
                             backgroundColor: shouldHighlight
                               ? theme.palette.background.tab
-                              : "transparent"
+                              : "transparent",
                           }}
                         >
                           {tab.title}
@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "flex-start",
-                width: "100%"
+                width: "100%",
               }}
             >
               <IconButton onClick={() => setOpenMenu(!openMenu)}>
@@ -182,8 +182,8 @@ const Navbar: React.FC = () => {
                   "& .MuiDrawer-paper": {
                     width: 260,
                     bgcolor: theme.palette.background.drawer,
-                    padding: 2
-                  }
+                    padding: 2,
+                  },
                 }}
               >
                 <Box sx={{ mb: 1 }}>
@@ -192,7 +192,7 @@ const Navbar: React.FC = () => {
                       sx={{
                         fontSize: 60,
                         color: theme.palette.background.paper,
-                        transform: "rotate(180deg)"
+                        transform: "rotate(180deg)",
                       }}
                     />
                   </IconButton>
@@ -201,7 +201,7 @@ const Navbar: React.FC = () => {
                       width: "80%",
                       p: 0.1,
                       ml: 2,
-                      bgcolor: theme.palette.background.divider
+                      bgcolor: theme.palette.background.divider,
                     }}
                   />
                 </Box>
@@ -220,7 +220,7 @@ const Navbar: React.FC = () => {
                         sx={{
                           color: isActive
                             ? theme.palette.background.tab
-                            : theme.palette.text.primary
+                            : theme.palette.text.primary,
                         }}
                       >
                         <ListItemText
@@ -228,8 +228,8 @@ const Navbar: React.FC = () => {
                           slotProps={{
                             primary: {
                               fontWeight: isActive ? 600 : 400,
-                              fontSize: 25
-                            }
+                              fontSize: 25,
+                            },
                           }}
                         />
                       </ListItemButton>
@@ -245,7 +245,7 @@ const Navbar: React.FC = () => {
                   color: theme.palette.text.primary,
                   cursor: "pointer",
                   display: "flex",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
                 variant="h4"
               >

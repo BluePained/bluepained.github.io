@@ -137,7 +137,9 @@ const Game = () => {
         sx={{
           mt: 17,
           py: 6,
-          px: { xs: 2, md: 50 },
+          px: { xs: 2, md: 8 },
+          maxWidth: 1200,
+          mx: "auto",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",

@@ -6,14 +6,14 @@ const Banner: React.FC = () => {
     <Box
       position="relative"
       minHeight="400px"
-      height="800px"
+      height="1200px"
       display="flex"
       alignItems="center"
       justifyContent="center"
       sx={{
         "@media (max-width:600px)": {
-          height: "auto"
-        }
+          height: "auto",
+        },
       }}
     >
       <Box
@@ -24,7 +24,7 @@ const Banner: React.FC = () => {
           height: "100%",
           width: "100%",
           objectFit: "cover",
-          position: "absolute"
+          position: "absolute",
         }}
       />
     </Box>

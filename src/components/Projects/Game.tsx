@@ -104,7 +104,9 @@ const Game = () => {
         sx={{
           mt: 17,
           py: 6,
-          px: { xs: 2, md: 50 },
+          px: { xs: 2, md: 8 },
+          maxWidth: 1200,
+          mx: "auto",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
@@ -206,12 +208,21 @@ const Game = () => {
                   >
                     {game.title}
                   </Typography>
+                  <Divider
+                    sx={{ bgcolor: theme.palette.text.secondary, my: 0.5 }}
+                  />
                   <Typography variant="body2" sx={{ color: "white" }}>
                     {game.jam}
                   </Typography>
+                  <Divider
+                    sx={{ bgcolor: theme.palette.text.secondary, my: 0.5 }}
+                  />
                   <Typography variant="body2" sx={{ color: "white" }}>
                     Team Size: {game.team}
                   </Typography>
+                  <Divider
+                    sx={{ bgcolor: theme.palette.text.secondary, my: 0.5 }}
+                  />
                   <Typography variant="body2" sx={{ color: "white" }}>
                     {game.role}
                   </Typography>

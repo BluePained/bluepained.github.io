@@ -8,7 +8,7 @@ import {
   CardMedia,
   CardContent,
   Button,
-  useMediaQuery
+  useMediaQuery,
 } from "@mui/material";
 import Banner from "./Banner";
 
@@ -19,18 +19,18 @@ const Home = () => {
     {
       title: "DicXtator",
       imagePath: "/Game/DicXtator/DicXtator.png",
-      link: "https://bluepained.itch.io/dictator-ggj-edition"
+      link: "https://bluepained.itch.io/dictator-ggj-edition",
     },
     {
       title: "Ella's alone night",
       imagePath: "/Game/Ella'sAloneNight/Ella'sAloneNight.png",
-      link: "https://bluepained.itch.io/ellas-alone-night"
+      link: "https://bluepained.itch.io/ellas-alone-night",
     },
     {
       title: "Farly's Flower Shop",
       imagePath: "/Game/Farly'sFlowerShop/Farly'sFlowerShop.png",
-      link: "https://draypixel.itch.io/farlys-flower-shop"
-    }
+      link: "https://draypixel.itch.io/farlys-flower-shop",
+    },
   ];
 
   return (
@@ -39,21 +39,22 @@ const Home = () => {
       <Box
         sx={{
           py: isSmallScreen ? 0 : 3,
-          bgcolor: theme.palette.background.drawer
+          bgcolor: theme.palette.background.drawer,
         }}
       />
       <Box
         sx={{
           pt: 4,
-          mx: isSmallScreen ? 0 : 40,
-          bgcolor: theme.palette.background.card
+          maxWidth: 1200,
+          mx: "auto",
+          bgcolor: theme.palette.background.card,
         }}
       >
         <Typography
           sx={{
             color: theme.palette.text.primary,
             display: "flex",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
           variant="h4"
         >
@@ -66,7 +67,7 @@ const Home = () => {
               p: 0.1,
               mt: 1,
               mb: 2,
-              bgcolor: theme.palette.background.divider
+              bgcolor: theme.palette.background.divider,
             }}
           />
         </Box>
@@ -77,7 +78,7 @@ const Home = () => {
             px: { xs: 3, md: 8 },
             pt: 3,
             pb: 1,
-            bgcolor: theme.palette.background.card
+            bgcolor: theme.palette.background.card,
           }}
         >
           {game.map((item, index) => (
@@ -88,7 +89,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 sx={{
-                  textDecoration: "none"
+                  textDecoration: "none",
                 }}
               >
                 <CardMedia
@@ -103,8 +104,8 @@ const Home = () => {
                     transition: "all 0.3s ease",
                     cursor: "pointer",
                     "&:hover": {
-                      transform: "translateY(-8px) scale(1.03)"
-                    }
+                      transform: "translateY(-8px) scale(1.03)",
+                    },
                   }}
                 />
                 <CardContent>
@@ -112,7 +113,7 @@ const Home = () => {
                     variant="h6"
                     sx={{
                       textAlign: "center",
-                      fontWeight: 600
+                      fontWeight: 600,
                     }}
                   >
                     {item.title}
@@ -126,7 +127,7 @@ const Home = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            pb: 3
+            pb: 3,
           }}
         >
           <Button
@@ -142,8 +143,8 @@ const Home = () => {
               transition: "all 0.3s ease",
               bgcolor: theme.palette.background.divider,
               "&:hover": {
-                transform: "translateY(-3px)"
-              }
+                transform: "translateY(-3px)",
+              },
             }}
           >
             See all the projects

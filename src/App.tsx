@@ -35,6 +35,8 @@ function App() {
         sx={{
           position: "relative",
           minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
           overflow: "hidden",
           "&::before": {
             content: '""',
@@ -56,41 +58,43 @@ function App() {
         }}
       >
         <Navbar />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Projects/Game" element={<Game />} />
-            <Route path="/Projects/Shader" element={<Shader />} />
-            <Route path="/Projects/Tool" element={<Tool />} />
-            <Route path="/AboutMe" element={<AboutMe />} />
-            <Route path="/Contact" element={<Contact />} />
-          </Routes>
-          {show && (
-            <Fab
-              variant="circular"
-              onClick={scrollToTop}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                position: "fixed",
-                bottom: isSmallScreen ? 90 : 30,
-                right: 30,
-                zIndex: 1000,
-                bgcolor: theme.palette.background.tab,
-                "&:hover": {
-                  bgcolor: theme.palette.primary.light,
-                },
-              }}
-            >
-              <ArrowUpwardIcon
+        <Box sx={{ flex: 1 }}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Projects/Game" element={<Game />} />
+              <Route path="/Projects/Shader" element={<Shader />} />
+              <Route path="/Projects/Tool" element={<Tool />} />
+              <Route path="/AboutMe" element={<AboutMe />} />
+              <Route path="/Contact" element={<Contact />} />
+            </Routes>
+            {show && (
+              <Fab
+                variant="circular"
+                onClick={scrollToTop}
                 sx={{
-                  color: theme.palette.background.nav,
-                  fontSize: 35,
+                  display: "flex",
+                  justifyContent: "center",
+                  position: "fixed",
+                  bottom: isSmallScreen ? 90 : 30,
+                  right: 30,
+                  zIndex: 1000,
+                  bgcolor: theme.palette.background.tab,
+                  "&:hover": {
+                    bgcolor: theme.palette.primary.light,
+                  },
                 }}
-              />
-            </Fab>
-          )}
-        </BrowserRouter>
+              >
+                <ArrowUpwardIcon
+                  sx={{
+                    color: theme.palette.background.nav,
+                    fontSize: 35,
+                  }}
+                />
+              </Fab>
+            )}
+          </BrowserRouter>
+        </Box>
         <Footer />
       </Box>
     </>

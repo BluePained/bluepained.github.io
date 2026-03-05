@@ -1,7 +1,7 @@
 {
   "name": "jiro-web",
   "private": true,
-  "homepage": "https://BluePained.github.io/bluepained",
+  "homepage": "https://BluePained.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

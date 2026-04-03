@@ -17,9 +17,9 @@ const Home = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
   const game = [
     {
-      title: "DicXtator",
-      imagePath: "/Game/DicXtator/DicXtator.png",
-      link: "https://bluepained.itch.io/dictator-ggj-edition",
+      title: "Grand Debt Auto",
+      imagePath: "/Game/GrandDebtAuto/GDA.jpg",
+      link: "https://draypixel.itch.io/grand-debt-auto",
     },
     {
       title: "Ella's alone night",

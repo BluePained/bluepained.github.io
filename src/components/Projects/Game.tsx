@@ -19,6 +19,20 @@ const Game = () => {
 
   const game = [
     {
+      title: "Grand Debt Auto",
+      gifPath: "/Game/GrandDebtAuto/GDA.gif",
+      imagePath: "/Game/GrandDebtAuto/GDA.jpg",
+      link: "https://draypixel.itch.io/grand-debt-auto",
+      jam: "One More Run IV (2026)",
+      team: "6 People",
+      role: "Technical Artist",
+      job: [
+        "Enforced poly count and draw call budgets, optimizing assets for web performance.",
+        "Advised the 3D artist on poly limits and optimization techniques.",
+        "Designed the game thumbnail.",
+      ],
+    },
+    {
       title: "DicXtator",
       gifPath: "/Game/DicXtator/DicXtator.gif",
       imagePath: "/Game/DicXtator/DicXtator.png",
@@ -170,11 +184,21 @@ const Game = () => {
           sx={{
             width: "100%",
             px: { xs: 3, md: 8 },
-            pt: { xs: 3, md: 8 },
+            pt: { xs: 3, md: 4 },
             borderRadius: 4,
             bgcolor: theme.palette.background.card,
           }}
         >
+          <Typography
+            variant="body2"
+            sx={{
+              color: theme.palette.text.secondary,
+              mb: 3,
+              textAlign: "center",
+            }}
+          >
+            Click the thumbnail to visit the game's page
+          </Typography>
           {game.map((game, index) => (
             <Box key={index} sx={{ mb: 6 }}>
               <Grid container spacing={4}>
